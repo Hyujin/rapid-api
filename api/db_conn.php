@@ -2,8 +2,8 @@
 // Database configuration
 $dbHost     = "localhost";
 $dbUsername = "root";
-$dbPassword = "Altria123!@#";
-$dbName     = "auto_api";
+$dbPassword = "db-password";
+$dbName     = "db-name";
 
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
