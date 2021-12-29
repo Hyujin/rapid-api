@@ -5,8 +5,8 @@ function sendResult () {
 
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "Altria123!@#";
-$db_name = "auto_api";
+$db_pass = "db-password";
+$db_name = "db-name";
 
 mysqli_report(MYSQLI_REPORT_ERROR|MYSQLI_REPORT_STRICT);
 $con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
@@ -31,8 +31,8 @@ if ($result->num_rows > 0) {
 
             $post_params = array(
                // Credentials
-                'cc_name' => 'altria',    //replace with cc_name of your account
-                'cc_api_key' => 'Skd90w3epae4925o9sdi2384rks95y', //replace with api_key of your account
+                'cc_name' => 'api-name-here',    //replace with cc_name of your account
+                'cc_api_key' => 'api-key-here', //replace with api_key of your account
                 
                 // api method to call
                 'method' => 'add_inbound_data',
@@ -57,8 +57,7 @@ if ($result->num_rows > 0) {
 
             var_dump($post_params);
 
-            /*$ch = curl_init('https://www.rapidphonecenter.com/sapi/callcenter_post.php');*/ /*DO NOT UNQUOTE THIS UNLESS CODES ARE STABLE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-            $ch = curl_init('127.0.0.1/sometest/'); //testing link to check parameter values on url
+            /*$ch = curl_init('https://api-url-here');*/ 
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, TRUE);
             curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post_params));
