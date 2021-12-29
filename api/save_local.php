@@ -11,8 +11,8 @@ $acct_id = $_POST['acct_id'];
 
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "Altria123!@#";
-$db_name = "auto_api";
+$db_pass = "db-password";
+$db_name = "db-name";
 
 mysqli_report(MYSQLI_REPORT_ERROR|MYSQLI_REPORT_STRICT);
 $con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
